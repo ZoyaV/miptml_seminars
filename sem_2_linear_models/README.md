@@ -19,6 +19,7 @@ residuals. This is achieved using:
 
 \[ \beta = (X^T X)^{-1} X^T Y \]
 
+Implementation with sklearn
 ```python
 from sklearn.linear_model import LinearRegression
 
