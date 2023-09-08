@@ -1,6 +1,6 @@
-### README: Linear Regression
+# README: Linear Regression
 
-#### 1. Theory:
+## 1. Theory:
 Linear regression models the relationship between a dependent variable and 
 one or more independent variables using a linear equation. The 
 relationship is represented in matrix notation as:
@@ -37,7 +37,7 @@ Ensure you've already divided your data into training and test sets (e.g.,
 using `train_test_split` from `sklearn`) and imported necessary libraries 
 before executing the above code.
 
-#### 2. Gradient Descent and Other Linear Models Optimization Techniques:
+## 2. Gradient Descent and Other Linear Models Optimization Techniques:
 
 When dealing with large datasets, the matrix operations required for linear regression (like matrix inversion) become computationally intensive and impractical. To overcome these challenges, optimization techniques like gradient descent are employed.
 
@@ -82,8 +82,66 @@ y_pred = regressor.predict(X_test)
 ```
 
 Note: When using gradient descent-based methods, it's crucial to scale or normalize the input features.
+## 3. Metrics
 
-#### 3. Considerations When Implementing:
+ Let's briefly discuss the regression metrics in English.
+
+**1. Mean Absolute Error (MAE)**
+\[ MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i| \]
+
+**Features**:
+- Easy to interpret; average absolute prediction error.
+- Doesn't account for the direction of errors.
+- Less sensitive to outliers than MSE.
+
+**When to use**: When you want your model to be penalized linearly for prediction errors.
+
+---
+
+**2. Mean Squared Error (MSE)**
+\[ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \]
+
+**Features**:
+- Strongly penalizes larger errors.
+- Sensitive to outliers.
+
+**When to use**: When you want to particularly minimize large errors.
+
+---
+
+**3. Root Mean Squared Error (RMSE)**
+\[ RMSE = \sqrt{MSE} \]
+
+**Features**:
+- Error in the same units as the data.
+- Penalizes large errors.
+
+**When to use**: When units matter and large errors are critical.
+
+---
+
+**4. Mean Absolute Percentage Error (MAPE)**
+\[ MAPE = \frac{100%}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \]
+
+**Features**:
+- Expresses error as a percentage of true values.
+- Undefined for true values of zero.
+- Can inflate errors for small true values.
+
+**When to use**: When expressing error as a percentage is desirable, but be cautious with datasets having zero or very small true values.
+
+---
+
+**5. Coefficient of Determination \( R^2 \)**
+\[ R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2} \]
+
+**Features**:
+- Represents the proportion of variance explained by the model.
+- Ranges from -∞ to 1. A value of 1 indicates a perfect fit; 0 indicates the model predicts no better than the mean.
+
+**When to use**: When you want to evaluate how much variance your model explains compared to just using the mean value.
+
+## 4. Considerations When Implementing:
 - **Assumptions**: Ensure that the assumptions of linear regression are 
 met, which include linearity, independence, homoscedasticity, and 
 normality.
@@ -99,7 +157,7 @@ regression line. Consider outlier detection techniques.
 it can overfit to the training data.
 
 
-### 4. Analyzing Feature Influence using Linear Regression:
+## 5. Analyzing Feature Influence using Linear Regression:
 
 Linear regression can be instrumental in assessing the impact of individual features on the dependent variable. The coefficients associated with each feature indicate the change in the dependent variable for a one-unit change in the predictor, assuming other predictors remain constant.
 
