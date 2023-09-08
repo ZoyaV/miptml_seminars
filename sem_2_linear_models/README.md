@@ -19,7 +19,7 @@ residuals. This is achieved using:
 
 \[ \beta = (X^T X)^{-1} X^T Y \]
 
-#### 4. Gradient Descent and Other Linear Models Optimization Techniques:
+#### 2. Gradient Descent and Other Linear Models Optimization Techniques:
 
 When dealing with large datasets, the matrix operations required for linear regression (like matrix inversion) become computationally intensive and impractical. To overcome these challenges, optimization techniques like gradient descent are employed.
 
