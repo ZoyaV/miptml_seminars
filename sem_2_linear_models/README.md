@@ -1,5 +1,13 @@
 # README: Linear Regression
+## Table of Contents
 
+- [1. Theory](## 1. Theory)
+- [2. Gradient Descent and Other Linear Models Optimization Techniques](## 2. Gradient Descent and Other Linear Models Optimization Techniques)
+- [3. Metrics](#chapter-1-introduction)
+- [4. Considerations When Implementing](#chapter-1-introduction)
+- [5. Analyzing Feature Influence using Linear Regression](#chapter-1-introduction)
+
+- 
 ## 1. Theory:
 Linear regression models the relationship between a dependent variable and 
 one or more independent variables using a linear equation. The 
