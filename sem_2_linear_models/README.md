@@ -19,6 +19,23 @@ residuals. This is achieved using:
 
 \[ \beta = (X^T X)^{-1} X^T Y \]
 
+```python
+from sklearn.linear_model import LinearRegression
+
+# Create an instance of the model
+regressor = LinearRegression()
+
+# Fit the model to data
+regressor.fit(X_train, y_train)
+
+# Make predictions
+y_pred = regressor.predict(X_test)
+```
+
+Ensure you've already divided your data into training and test sets (e.g., 
+using `train_test_split` from `sklearn`) and imported necessary libraries 
+before executing the above code.
+
 #### 2. Gradient Descent and Other Linear Models Optimization Techniques:
 
 When dealing with large datasets, the matrix operations required for linear regression (like matrix inversion) become computationally intensive and impractical. To overcome these challenges, optimization techniques like gradient descent are employed.
@@ -80,26 +97,8 @@ regression line. Consider outlier detection techniques.
 - **Overfitting**: If the model has too many predictors or is too complex, 
 it can overfit to the training data.
 
-#### 4. Running the Model using `sklearn`:
 
-```python
-from sklearn.linear_model import LinearRegression
-
-# Create an instance of the model
-regressor = LinearRegression()
-
-# Fit the model to data
-regressor.fit(X_train, y_train)
-
-# Make predictions
-y_pred = regressor.predict(X_test)
-```
-
-Ensure you've already divided your data into training and test sets (e.g., 
-using `train_test_split` from `sklearn`) and imported necessary libraries 
-before executing the above code.
-
-### 5. Analyzing Feature Influence using Linear Regression:
+### 4. Analyzing Feature Influence using Linear Regression:
 
 Linear regression can be instrumental in assessing the impact of individual features on the dependent variable. The coefficients associated with each feature indicate the change in the dependent variable for a one-unit change in the predictor, assuming other predictors remain constant.
 
