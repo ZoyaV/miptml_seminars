@@ -1,3 +1,5 @@
+https://github.com/jbrownlee/Datasets/blob/master/daily-min-temperatures.csv
+
 ### Темы 
 
 1. Основы Временных Рядов: Тренды, Сезонность и Цикличность
